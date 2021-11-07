@@ -11,7 +11,7 @@ const dbUserName = "kien";
 
 const dbPw = "chikien"; 
 
-const dbName = "Cluster0"; 
+const dbName = "cluster0"; 
 
 const MONGO_URI = `mongodb+srv://${dbUserName}:${dbPw}@cluster0.5zjmf.mongodb.net/${dbName}`; 
 
