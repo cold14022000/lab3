@@ -2,10 +2,24 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const heroku = require("heroku");
+const mongoose = require('mongoose'); 
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+const dbUserName = "kien"; 
+
+const dbPw = "chikien"; 
+
+const dbName = "Cluster0"; 
+
+const MONGO_URI = `mongodb+srv://${dbUserName}:${dbPw}@cluster0.5zjmf.mongodb.net/${dbName}`; 
+
+mongoose.connect(MONGO_URI, () => { 
+
+  console.log("Connected to DB"); 
+
+}); 
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
